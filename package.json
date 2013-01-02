@@ -1,0 +1,18 @@
+{
+	"name": "RadioTwitterBot.js",
+	"version": "0.0.1",
+	"author": "Eriks <eriks@geekli.st>",
+	"description": "a simple internet radio twitter bot",
+	"keywords": [
+		"itunes",
+		"twitter",
+		"radio"
+	],
+	"dependencies": {
+		"request": "*",
+		"icecast-stack": "*",
+		"oauth": "*",
+		"itunes-shorturl": "https://github.com/EriksRemess/itunes-shorturl/tarball/master"
+	},
+	"main": "./radiotwitterbot"
+}
