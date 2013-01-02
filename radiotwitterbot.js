@@ -22,9 +22,10 @@ var tweet = function(status){
 		{ "status": status },
 		function(error, data){
 			if(!error){
-				console.log(JSON.parse(data));
+				console.log("%s - %s", new Date(), JSON.parse(data).text);
 			} else {
-				console.log(require('sys').inspect(error));
+				var error_data = JSON.parse(error.data);
+				console.log("%s - ERROR posting '%s' - %d - %d %s", new Date(), status, error.statusCode, error_data.errors[0].code, error_data.errors[0].message);
 			}
 		}
 	);
