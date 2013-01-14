@@ -19,7 +19,10 @@ var tweet = function(status){
 	status = status.replace(/(^|[-\u2014\s(\["])'/g, "$1\u2018")
 					.replace(/'/g, "\u2019")
 					.replace(/(^|[-\u2014/\[(\u2018\s])"/g, "$1\u201c")
-					.replace(/"/g, "\u201d").replace(/--/g, "\u2014");
+					.replace(/"/g, "\u201d")
+					.replace(/--/g, "\u2014")
+					.replace(/\(/, "\u0028")
+					.replace(/\)/, "\u0029");
 	twitter.post("https://api.twitter.com/1.1/statuses/update.json",
 		config.twitter.oauth_token,
 		config.twitter.oauth_token_secret,
